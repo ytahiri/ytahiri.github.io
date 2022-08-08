@@ -94,15 +94,6 @@ repeat(n,i,
 
 
     <script id="xrsqueezehold" type="text/x-cindyscript">
-        //drag the verticies when proximal and holding the squeeze button
-        controllerPosition = inputsource.gripSpaceTransform.position;
-        repeat(length(vertices), i,
-            closeEnough = |(controllerPosition - vertices_(i))| < tolerance;
-            if(closeEnough,
-                vertices_i = controllerPosition;
-                lineSlope = vertices_2-vertices_1;
-            );
-        );
     </script>
 
     <script id="xrsqueezestart" type="text/x-cindyscript">

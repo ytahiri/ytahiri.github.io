@@ -21,11 +21,6 @@
         use("Cindy3D");
         use("CindyXR");
         initxrcindy3d(referencemode->"local-floor");
-
-        tolerance = 0.03;
-
-        selectButton = dict(left->0, right->0);
-        squeezeButton = dict(left->0, right->0);
     </script>
 
     <script id="xrdraw" type="text/x-cindyscript">
@@ -82,26 +77,6 @@ repeat(n,i,
                 vertices_i = projectOntoLine(controllerPosition, vertices_i, lineSlope);
             );
         );
-    </script>
-
-    <script id="xrselectstart" type="text/x-cindyscript">
-      selectButton = put(selectButton, inputsource.handedness, 1);
-    </script>
-
-    <script id="xrselectend" type="text/x-cindyscript">
-      selectButton = put(selectButton, inputsource.handedness, 0);
-    </script>
-
-
-    <script id="xrsqueezehold" type="text/x-cindyscript">
-    </script>
-
-    <script id="xrsqueezestart" type="text/x-cindyscript">
-      selectButton = put(selectButton, inputsource.handedness, 1);
-    </script>
-
-    <script id="xrsqueezeend" type="text/x-cindyscript">
-      selectButton = put(squeezeButton, inputsource.handedness, 0);
     </script>
 
 
